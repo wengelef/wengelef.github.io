@@ -13,14 +13,12 @@
             row
             fill-height
             align-end>
-            <v-flex xs12 sm6 class="pl-5">
-              <v-card color="rgba(0, 0, 0, 0.7)">
-                <div>
-                  <div class="display-2 pl-5 pt-5">Florian Wengelewski</div>
-                  <div class="display-1 pl-5 pt-2 pb-2">Android Developer</div>
-                </div>
-              </v-card>
-            </v-flex>
+            <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-4">
+              <div>
+                <div class="display-2">Florian Wengelewski</div>
+                <div class="display-1 pt-2">Android Developer</div>
+              </div>
+            </v-card>
           </v-layout>
         </v-container>
       </v-parallax>
@@ -70,5 +68,9 @@ export default {
 
 <style>
   @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+  .rounded-card {
+    border-radius: 16px
+  }
 </style>
 
