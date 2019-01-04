@@ -1,42 +1,20 @@
 <template>
-  <v-app dark v-smooth-scroll>
-    <!--<v-toolbar>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Florian Wengelewski</v-toolbar-title>
-    </v-toolbar>-->
-
+  <v-app dark>
     <v-content>
-      <v-parallax :src="require('@/assets/avatar.jpg')" height="600">
-        <v-container fluid>
-          <v-layout 
-            row
-            fill-height
-            align-end>
-            <v-flex xs12 sm6 class="pl-5">
-              <v-card color="rgba(0, 0, 0, 0.7)">
-                <div>
-                  <div class="display-2 pl-5 pt-5">Florian Wengelewski</div>
-                  <div class="display-1 pl-5 pt-2 pb-2">Android Developer</div>
-                </div>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-parallax>
 
       <v-container fluid>
         <v-layout>
           <v-flex text-xs-center>
             <v-btn round :outline="outlineContact" color="green" @click="contactClick">Contact</v-btn>
             <v-btn round :outline="outlineSkills" color="teal" @click="skillsClick">Skills</v-btn>
-            <v-btn round :outline="outlineCurrently" color="red" @click="currentlyClick">Present</v-btn>
-            <v-btn round :outline="outlinePast" color="orange" @click="pastClick">Past</v-btn>
+            <v-btn round :outline="outlineCurrently" color="red" @click="currentlyClick">In Progress</v-btn>
+            <v-btn round :outline="outlinePast" color="orange" @click="pastClick">Done</v-btn>
             <v-btn round :outline="outlineBacklog" color="blue" @click="backlogClick">Backlog</v-btn>
           </v-flex>
         </v-layout>
       </v-container>
 
-      <v-flex xs12 sm10 offset-sm1>
+      <v-flex xs12 sm8 offset-sm2>
           <v-expansion-panel 
             popout 
             v-model="expands" expand>
@@ -203,6 +181,8 @@
           </v-expansion-panel>
         </v-flex>
     </v-content>
+
+    
   </v-app>
 </template>
 
@@ -216,6 +196,11 @@ export default {
     outlinePast: true,
     outlineBacklog: true,
     expands: [false, true, true, false, false],
+    items: [
+      { title: 'Home', icon: 'dashboard' },
+      { title: 'About', icon: 'question_answer' }
+    ],
+    right: null,
     skills: [
       { text: 'Seasoned in using Android Studio IDE for Android Development, Android SDK’s and commonly used third-party-libraries' },
       { text: 'Git version control system' },
@@ -337,7 +322,6 @@ export default {
 </script>
 
 <style scoped>
-  @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
   ul li {
     font-size: 20px
