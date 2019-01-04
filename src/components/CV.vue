@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark v-smooth-scroll>
     <!--<v-toolbar>
       <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-toolbar-title>Florian Wengelewski</v-toolbar-title>
@@ -86,8 +86,6 @@
             </v-expansion-panel-content>
 
             <v-expansion-panel-content readonly>
-              <v-icon slot="actions" color="transparent"/>
-              <div slot="header">Skills</div>
               <v-flex class="pa-4">
                 <ul>
                   <li v-for="item in skills" :key="item.text">
@@ -191,8 +189,6 @@
             </v-expansion-panel-content>
 
             <v-expansion-panel-content readonly>
-              <v-icon slot="actions" color="transparent"/>
-              <div slot="header">Backlog</div>
               <v-flex class="pa-4">
                 <ul v-for="item in backlog" :key="item.title">
                   <a :href="item.url">{{ item.title }}</a>
@@ -342,5 +338,9 @@ export default {
 
 <style scoped>
   @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+  ul li {
+    font-size: 20px
+  }
 
 </style>
