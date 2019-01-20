@@ -6,22 +6,57 @@
         <v-toolbar-title>Florian Wengelewski</v-toolbar-title>
       </v-toolbar>-->
       
+      <div v-responsive.lg.xl>
+        <v-parallax :src="require('@/assets/avatar.jpg')" height="600">
+          <v-container fluid>
+            <v-layout 
+              row
+              fill-height
+              align-end>
+              <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-4">
+                <div>
+                  <div class="display-2">Florian Wengelewski</div>
+                  <div class="display-1 pt-2">Android Developer</div>
+                </div>
+              </v-card>
+            </v-layout>
+          </v-container>
+        </v-parallax>
+      </div>
 
-      <v-parallax :src="require('@/assets/avatar.jpg')" height="600">
-        <v-container fluid>
-          <v-layout 
-            row
-            fill-height
-            align-end>
-            <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-4">
-              <div>
-                <div class="display-2">Florian Wengelewski</div>
-                <div class="display-1 pt-2">Android Developer</div>
-              </div>
-            </v-card>
-          </v-layout>
-        </v-container>
-      </v-parallax>
+      <div v-responsive.md.sm.xs>
+        <!--<v-img :src="require('@/assets/avatar_xs.jpg')" alt="" max-height="400">
+          <v-container fluid>
+            <v-layout 
+              row
+              fill-height
+              align-end>
+              <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-3">
+                <div>
+                  <div class="display-1">Florian Wengelewski</div>
+                  <div class="display-1">Android Developer</div>
+                </div>
+              </v-card>
+            </v-layout>
+          </v-container>
+        </v-img>-->
+
+        <v-parallax :src="require('@/assets/avatar_xs.jpg')" height="400">
+          <v-container fluid>
+            <v-layout 
+              row
+              fill-height
+              align-end>
+              <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-3">
+                <div>
+                  <div class="display-1">Florian Wengelewski</div>
+                  <div class="display-1">Android Developer</div>
+                </div>
+              </v-card>
+            </v-layout>
+          </v-container>
+        </v-parallax>
+      </div>
 
       <router-view/>
       
