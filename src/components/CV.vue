@@ -74,96 +74,160 @@
             </v-expansion-panel-content>
 
             <v-expansion-panel-content readonly>
-              <v-timeline>
-                <v-timeline-item
-                  fill-dot
-                  right
-                  color="#29B6F6">
+              <div v-responsive.lg.xl>
+                <v-timeline>
+                  <v-timeline-item
+                    fill-dot
+                    right
+                    color="#29B6F6">
 
-                  
-                  <font slot="opposite" size="4" color="#29B6F6">since January 2017</font>
-                  <v-flex class="pa-4">
-                    <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
-                    <div><font size="4" color="#999999">Android Developer</font></div>
-                    <v-divider></v-divider>
+                    <font slot="opposite" size="4" color="#29B6F6">since January 2017</font>
                     <v-flex class="pa-4">
-                      <ul>
-                        <li v-for="item in nextmarkets" :key="item.text">
-                          {{ item.text }}
-                        </li>
-                      </ul>
+                      <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
+                      <div><font size="4" color="#999999">Android Developer</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in nextmarkets" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
                     </v-flex>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
+              <div v-responsive.sm.xs.md>
+                <v-flex class="pa-4">
+                  <div><font size="3" color="#29B6F6">since January 2017</font></div>
+                  <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
+                  <div><font size="4" color="#999999">Android Developer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in nextmarkets" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
                   </v-flex>
-                </v-timeline-item>
-              </v-timeline>
+                </v-flex>
+              </div>
             </v-expansion-panel-content>
 
             <v-expansion-panel-content readonly>
-              <v-timeline>
-                <v-timeline-item
-                  fill-dot
-                  right
-                  color="#f44336">
-                  <font slot="opposite" size="4" color="#f44336">January 2015 - January 2017</font>
-                  <v-flex class="pa-4">
-                    <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
-                    <div><font size="4" color="#999999">Android Developer</font></div>
-                    <v-divider></v-divider>
+              <div v-responsive.lg.xl>
+                <v-timeline>
+                  <v-timeline-item fill-dot right color="#f44336">
+                    <font slot="opposite" size="4" color="#f44336">January 2015 - January 2017</font>
                     <v-flex class="pa-4">
-                      <ul>
-                        <li v-for="item in rab" :key="item.text">
-                          {{ item.text }}
-                        </li>
-                      </ul>
-                      <div>Projects:</div>
-                      <ul>
-                        <li v-for="item in rabProjects" :key="item.text">
-                          {{ item.text }}
-                        </li>
-                      </ul>
+                      <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
+                      <div><font size="4" color="#999999">Android Developer</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in rab" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                        <div>Projects:</div>
+                        <ul>
+                          <li v-for="item in rabProjects" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
                     </v-flex>
-                  </v-flex>
-                </v-timeline-item>
+                  </v-timeline-item>
 
-                <v-timeline-item
-                  fill-dot
-                  right
-                  color="#FFEE58">
-                  <font slot="opposite" size="4" color="#FFEE58">September 2014 - December 2014</font>
-                  <v-flex class="pa-4">
-                    <div><font size="5" color="#FFEE58">Hottgenroth Software GmbH</font></div>
-                    <div><font size="4" color="#999999">Unity Development internship</font></div>
-                    <v-divider></v-divider>
+                  <v-timeline-item
+                    fill-dot
+                    right
+                    color="#FFEE58">
+                    <font slot="opposite" size="4" color="#FFEE58">September 2014 - December 2014</font>
                     <v-flex class="pa-4">
-                      <ul>
-                        <li v-for="item in hottgenroth" :key="item.text">
-                          {{ item.text }}
-                        </li>
-                      </ul>
+                      <div><font size="5" color="#FFEE58">Hottgenroth Software GmbH</font></div>
+                      <div><font size="4" color="#999999">Unity Development internship</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in hottgenroth" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
                     </v-flex>
-                  </v-flex>
-                </v-timeline-item>
+                  </v-timeline-item>
 
-                <v-timeline-item
-                  fill-dot
-                  right
-                  color="#0097A7">
-                  <font slot="opposite" size="4" color="#0097A7">March 2012 - September 2013</font>
-                  <v-flex class="pa-4">
-                    <div><font size="5" color="#0097A7">Nurogames GmbH</font></div>
-                    <div><font size="4" color="#999999">Android Developer</font></div>
-                    <v-divider></v-divider>
+                  <v-timeline-item
+                    fill-dot
+                    right
+                    color="#0097A7">
+                    <font slot="opposite" size="4" color="#0097A7">March 2012 - September 2013</font>
                     <v-flex class="pa-4">
-                      <ul>
-                        <li v-for="item in nurogames" :key="item.text">
-                          {{ item.text }}
-                        </li>
-                      </ul>
+                      <div><font size="5" color="#0097A7">Nurogames GmbH</font></div>
+                      <div><font size="4" color="#999999">Android Developer</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in nurogames" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
                     </v-flex>
-                  </v-flex>
-                </v-timeline-item>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
 
-              </v-timeline>
+              <div v-responsive.md.sm.xs>
+                <v-flex class="pa-4">
+                  <font size="3" color="#f44336">January 2015 - January 2017</font>
+                  <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
+                  <div><font size="4" color="#999999">Android Developer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in rab" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                    <div>Projects:</div>
+                    <ul>
+                      <li v-for="item in rabProjects" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+                
+                <v-flex class="pa-4">
+                  <font size="3" color="#FFEE58">September 2014 - December 2014</font>
+                  <div><font size="5" color="#FFEE58">Hottgenroth Software GmbH</font></div>
+                  <div><font size="4" color="#999999">Unity Development internship</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in hottgenroth" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+                
+                <v-flex class="pa-4">
+                  <font size="3" color="#0097A7">March 2012 - September 2013</font>
+                  <div><font size="5" color="#0097A7">Nurogames GmbH</font></div>
+                  <div><font size="4" color="#999999">Android Developer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in nurogames" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+              </div>
             </v-expansion-panel-content>
 
             <v-expansion-panel-content readonly>

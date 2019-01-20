@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import VueSmoothScroll from 'vue2-smooth-scroll'
+import responsive from 'vue-responsive'
 import 'vuetify/src/stylus/app.styl'
 import 'vuetify/dist/vuetify.min.css'
 
@@ -12,6 +13,7 @@ Vue.config.productionTip = false
 
 Vue.use(Vuetify)
 Vue.use(VueSmoothScroll)
+Vue.use(responsive)
 
 /* eslint-disable no-new */
 new Vue({
