@@ -274,9 +274,9 @@ export default {
     outlineContact: true,
     outlineSkills: false,
     outlineCurrently: false,
-    outlinePast: true,
+    outlinePast: false,
     outlineBacklog: true,
-    expands: [false, true, true, false, false],
+    expands: [false, true, true, true, false],
     items: [
       { title: 'Home', icon: 'dashboard' },
       { title: 'About', icon: 'question_answer' }
