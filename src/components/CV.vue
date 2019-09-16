@@ -79,16 +79,16 @@
                   <v-timeline-item
                     fill-dot
                     right
-                    color="#29B6F6">
+                    color="#1de9b6">
 
-                    <font slot="opposite" size="4" color="#29B6F6">since January 2017</font>
+                    <font slot="opposite" size="4" color="#1de9b6">since April 2019</font>
                     <v-flex class="pa-4">
-                      <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
-                      <div><font size="4" color="#999999">Android Developer</font></div>
+                      <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
+                      <div><font size="4" color="#999999">Software Engineer</font></div>
                       <v-divider></v-divider>
                       <v-flex class="pa-4">
                         <ul>
-                          <li v-for="item in nextmarkets" :key="item.text">
+                          <li v-for="item in rewe" :key="item.text">
                             {{ item.text }}
                           </li>
                         </ul>
@@ -99,13 +99,13 @@
               </div>
               <div v-responsive.sm.xs.md>
                 <v-flex class="pa-4">
-                  <div><font size="3" color="#29B6F6">since January 2017</font></div>
-                  <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
-                  <div><font size="4" color="#999999">Android Developer</font></div>
+                  <div><font size="3" color="#1de9b6">since April 2019</font></div>
+                  <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
+                  <div><font size="4" color="#999999">Software Engineer</font></div>
                   <v-divider></v-divider>
                   <v-flex class="pa-4">
                     <ul>
-                      <li v-for="item in nextmarkets" :key="item.text">
+                      <li v-for="item in rewe" :key="item.text">
                         {{ item.text }}
                       </li>
                     </ul>
@@ -117,6 +117,23 @@
             <v-expansion-panel-content readonly>
               <div v-responsive.lg.xl>
                 <v-timeline>
+
+                  <v-timeline-item fill-dot right color="#29B6F6">
+                    <font slot="opposite" size="4" color="#29B6F6">January 2017 - April 2019</font>
+                    <v-flex class="pa-4">
+                      <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
+                      <div><font size="4" color="#999999">Software Engineer</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in nextmarkets" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
+                    </v-flex>
+                  </v-timeline-item>
+
                   <v-timeline-item fill-dot right color="#f44336">
                     <font slot="opposite" size="4" color="#f44336">January 2015 - January 2017</font>
                     <v-flex class="pa-4">
@@ -266,19 +283,24 @@ export default {
     ],
     right: null,
     skills: [
-      { text: 'Seasoned in using Android Studio IDE for Android Development, Android SDK’s and commonly used third-party-libraries' },
+      { text: 'Seasoned in using IntelliJ IDEA or Android Studio for Android Development, Android SDK’s and commonly used third-party-libraries' },
       { text: 'Git version control system' },
       { text: 'Understanding of the importance of code quality and continuous integration (Unit Testing, static code analysis, Jenkins CI, Fabric/Firebase)' },
-      { text: 'Broad development knowledge in Java and Kotlin' },
+      { text: 'Broad development knowledge of Kotlin' },
       { text: 'Enthusiastic about Material Design and Mobile User Experience' },
       { text: 'MVVM and MVP architecture' },
       { text: 'Functional Reactive Programming (RxJava)' },
       { text: 'Implementing RESTful Clients has become second nature (Retrofit 2, Volley)' },
-      { text: 'ORMs and NoSQL (Realm, GreenDAO, ActiveAndroid, SQL Brite)' },
-      { text: 'Dependency injection (Dagger 2, Kodein)' },
+      { text: 'ORMs and NoSQL (Realm, GreenDAO, ActiveAndroid, SQL Delight)' },
+      { text: 'Dependency injection (Dagger 2, Koin)' },
       { text: 'Active StackOverflow community member' },
       { text: 'Working in agile environments (Scrum, Kanban)' },
       { text: 'Up to speed with technical advancements of Android' },
+      { text: 'Wannabe functionalist' },
+    ],
+    rewe: [
+      { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
+      { text: 'Unit- and Integration testing' },
     ],
     nextmarkets: [
       { text: 'Development of the native Android Client in Kotlin for the CFD Trading Platform nextmarkets' },

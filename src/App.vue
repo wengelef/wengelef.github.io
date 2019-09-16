@@ -16,7 +16,7 @@
               <v-card color="rgba(0, 0, 0, 0.7)" class="rounded-card pa-4">
                 <div>
                   <div class="display-2">Florian Wengelewski</div>
-                  <div class="display-1 pt-2">Android Developer</div>
+                  <div class="display-1 pt-2">Software Engineer</div>
                 </div>
               </v-card>
             </v-layout>
