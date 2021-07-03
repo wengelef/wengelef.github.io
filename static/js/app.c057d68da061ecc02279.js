@@ -7,6 +7,13 @@ webpackJsonp([1],{
 
 /***/ }),
 
+/***/ "JEb1":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "NHnr":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -120,14 +127,14 @@ var vue_esm = __webpack_require__("7+uW");
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-79317f8e","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('v-app',{attrs:{"dark":""}},[_c('div',{directives:[{name:"responsive",rawName:"v-responsive.lg.xl",modifiers:{"lg":true,"xl":true}}]},[_c('v-parallax',{attrs:{"src":__webpack_require__("lS+k"),"height":"600"}},[_c('v-container',{attrs:{"fluid":""}},[_c('v-layout',{attrs:{"row":"","fill-height":"","align-end":""}},[_c('v-card',{staticClass:"rounded-card pa-4",attrs:{"color":"rgba(0, 0, 0, 0.7)"}},[_c('div',[_c('div',{staticClass:"display-2"},[_vm._v("Florian Wengelewski")]),_vm._v(" "),_c('div',{staticClass:"display-1 pt-2"},[_vm._v("Software Engineer")])])])],1)],1)],1)],1),_vm._v(" "),_c('div',{directives:[{name:"responsive",rawName:"v-responsive.md.sm.xs",modifiers:{"md":true,"sm":true,"xs":true}}]},[_c('v-parallax',{attrs:{"src":__webpack_require__("rLcc"),"height":"400"}},[_c('v-container',{attrs:{"fluid":""}},[_c('v-layout',{attrs:{"row":"","fill-height":"","align-end":""}},[_c('v-card',{staticClass:"rounded-card pa-3",attrs:{"color":"rgba(0, 0, 0, 0.7)"}},[_c('div',[_c('div',{staticClass:"display-1"},[_vm._v("Florian Wengelewski")]),_vm._v(" "),_c('div',{staticClass:"display-1"},[_vm._v("Android Developer")])])])],1)],1)],1)],1),_vm._v(" "),_c('router-view')],1)],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-782fb668","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('v-app',{attrs:{"dark":""}},[_c('div',{directives:[{name:"responsive",rawName:"v-responsive.lg.xl",modifiers:{"lg":true,"xl":true}}]},[_c('v-parallax',{attrs:{"src":__webpack_require__("lS+k"),"height":"600"}},[_c('v-container',{attrs:{"fluid":""}},[_c('v-layout',{attrs:{"row":"","fill-height":"","align-end":""}},[_c('v-card',{staticClass:"rounded-card pa-4",attrs:{"color":"rgba(0, 0, 0, 0.7)"}},[_c('div',[_c('div',{staticClass:"display-2"},[_vm._v("Florian Wengelewski")]),_vm._v(" "),_c('div',{staticClass:"display-1 pt-2"},[_vm._v("Software Engineer")])])])],1)],1)],1)],1),_vm._v(" "),_c('div',{directives:[{name:"responsive",rawName:"v-responsive.md.sm.xs",modifiers:{"md":true,"sm":true,"xs":true}}]},[_c('v-parallax',{attrs:{"src":__webpack_require__("rLcc"),"height":"400"}},[_c('v-container',{attrs:{"fluid":""}},[_c('v-layout',{attrs:{"row":"","fill-height":"","align-end":""}},[_c('v-card',{staticClass:"rounded-card pa-3",attrs:{"color":"rgba(0, 0, 0, 0.7)"}},[_c('div',[_c('div',{staticClass:"display-1"},[_vm._v("Florian Wengelewski")]),_vm._v(" "),_c('div',{staticClass:"display-1"},[_vm._v("Software Engineer")])])])],1)],1)],1)],1),_vm._v(" "),_c('router-view')],1)],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var selectortype_template_index_0_src_App = (esExports);
 // CONCATENATED MODULE: ./src/App.vue
 function injectStyle (ssrContext) {
-  __webpack_require__("ui1Z")
+  __webpack_require__("JEb1")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -609,14 +616,7 @@ module.exports = __webpack_require__.p + "static/img/avatar_xs.c17c05d.jpg";
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
-
-/***/ "ui1Z":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.459390167748315088b7.js.map
+//# sourceMappingURL=app.c057d68da061ecc02279.js.map
