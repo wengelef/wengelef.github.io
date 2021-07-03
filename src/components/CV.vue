@@ -55,8 +55,8 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content>
-                      <v-list-tile-title>Aachenerstr. 325</v-list-tile-title>
-                      <v-list-tile-sub-title>50931 Koeln</v-list-tile-sub-title>
+                      <v-list-tile-title>Bertha-von-Suttner Straße 1</v-list-tile-title>
+                      <v-list-tile-sub-title>53840 Troisdorf</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
@@ -289,8 +289,9 @@ export default {
       { text: 'Broad development knowledge of Kotlin' },
       { text: 'Enthusiastic about Material Design and Mobile User Experience' },
       { text: 'MVVM and MVP architecture' },
+      { text: 'Clean Architecture and Design Patterns' },
       { text: 'Functional Reactive Programming (RxJava)' },
-      { text: 'Implementing RESTful Clients has become second nature (Retrofit 2, Volley)' },
+      { text: 'Implementing RESTful Clients is second nature (Retrofit 2, Volley)' },
       { text: 'ORMs and NoSQL (Realm, GreenDAO, ActiveAndroid, SQL Delight)' },
       { text: 'Dependency injection (Dagger 2, Koin)' },
       { text: 'Active StackOverflow community member' },
@@ -300,6 +301,8 @@ export default {
     ],
     rewe: [
       { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
+      { text: 'Maintenance of the legacy REWE Android App' },
+      { text: 'Creating mobile service endpoints' },
       { text: 'Unit- and Integration testing' },
     ],
     nextmarkets: [
@@ -336,14 +339,19 @@ export default {
     ],
     backlog: [
       { 
-        title: 'Lunch Memory',
-        url: 'https://github.com/wengelef/lunchmemory',
-        texts: [ 'Google Flutter SDK Test Project' ]
+        title: 'Validate',
+        url: 'https://github.com/wengelef/validate',
+        texts: [ 'Validation DSL for Kotlin Objects' ]
       },
       { 
-        title: 'KleanMVP',
-        url: 'https://github.com/wengelef/KleanMVP',
-        texts: [ 'Functional Reactive MVP Architecture Sample in Kotlin' ]
+        title: 'Functional Android',
+        url: 'https://github.com/wengelef/FunctionalAndroid',
+        texts: [ 'Android Sample Application using Clean Architecture and FunctionalProgramming Paradigms' ]
+      },
+      { 
+        title: 'Ktor mobile push gateway',
+        url: 'https://github.com/wengelef/ktor_pushgw',
+        texts: [ 'Push gateway for iOS and Android using Firebase' ]
       },
       { 
         title: 'RxFileUtils',

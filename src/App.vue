@@ -60,7 +60,7 @@
 
       <router-view/>
       
-      <v-bottom-nav
+      <!--<v-bottom-nav
         :active.sync="bottomNav"
         :value="true"
         :color="color"
@@ -76,7 +76,7 @@
           <span>Private</span>
           <v-icon>extension</v-icon>
         </v-btn>
-      </v-bottom-nav>
+      </v-bottom-nav>-->
     </v-app>
   </div>
 </template>
