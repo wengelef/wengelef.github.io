@@ -92,11 +92,11 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/wengelef.github.io/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/ })
 /************************************************************************/
 /******/ ([]);
-//# sourceMappingURL=manifest.0c88c3ed1c89401f9f13.js.map
+//# sourceMappingURL=manifest.3ad1d5771e9b13dbdad2.js.map
