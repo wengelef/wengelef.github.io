@@ -79,9 +79,47 @@
                   <v-timeline-item
                     fill-dot
                     right
-                    color="#1de9b6">
+                    color="#CFD8DC">
 
-                    <font slot="opposite" size="4" color="#1de9b6">since April 2019</font>
+                    <font slot="opposite" size="4" color="#CFD8DC">since January 2022</font>
+                    <v-flex class="pa-4">
+                      <div><font size="5" color="#CFD8DC">appDev GmbH & Co KG</font></div>
+                      <div><font size="4" color="#999999">Senior Android Engineer</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in appDev" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
+                    </v-flex>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
+              <div v-responsive.sm.xs.md>
+                <v-flex class="pa-4">
+                  <div><font size="3" color="#CFD8DC">since January 2022</font></div>
+                  <div><font size="5" color="#CFD8DC">appDev GmbH & Co KG</font></div>
+                  <div><font size="4" color="#999999">Senior Android Engineer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in appDev" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+              </div>
+            </v-expansion-panel-content>
+
+            <v-expansion-panel-content readonly>
+              <div v-responsive.lg.xl>
+                <v-timeline>
+
+                  <v-timeline-item fill-dot right color="#1de9b6">
+                    <font slot="opposite" size="4" color="#1de9b6">April 2019 - December 2021</font>
                     <v-flex class="pa-4">
                       <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
                       <div><font size="4" color="#999999">Software Engineer</font></div>
@@ -95,28 +133,6 @@
                       </v-flex>
                     </v-flex>
                   </v-timeline-item>
-                </v-timeline>
-              </div>
-              <div v-responsive.sm.xs.md>
-                <v-flex class="pa-4">
-                  <div><font size="3" color="#1de9b6">since April 2019</font></div>
-                  <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
-                  <div><font size="4" color="#999999">Software Engineer</font></div>
-                  <v-divider></v-divider>
-                  <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in rewe" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                  </v-flex>
-                </v-flex>
-              </div>
-            </v-expansion-panel-content>
-
-            <v-expansion-panel-content readonly>
-              <div v-responsive.lg.xl>
-                <v-timeline>
 
                   <v-timeline-item fill-dot right color="#29B6F6">
                     <font slot="opposite" size="4" color="#29B6F6">January 2017 - April 2019</font>
@@ -196,7 +212,36 @@
                 </v-timeline>
               </div>
 
+              <!-- Small -->
               <div v-responsive.md.sm.xs>
+                <v-flex class="pa-4">
+                  <font size="3" color="#1de9b6">April 2019 - December 2021</font>
+                  <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
+                  <div><font size="4" color="#999999">Software Engineer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in rewe" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+
+                <v-flex class="pa-4">
+                  <font size="3" color="#29B6F6">January 2017 - April 2019</font>
+                  <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
+                  <div><font size="4" color="#999999">Software Engineer</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in nextmarkets" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+
                 <v-flex class="pa-4">
                   <font size="3" color="#f44336">January 2015 - January 2017</font>
                   <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
@@ -298,6 +343,9 @@ export default {
       { text: 'Working in agile environments (Scrum, Kanban)' },
       { text: 'Up to speed with technical advancements of Android' },
       { text: 'Wannabe functionalist' },
+    ],
+    appDev: [
+      { text: 'IBM' },
     ],
     rewe: [
       { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
