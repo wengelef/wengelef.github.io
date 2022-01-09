@@ -29,7 +29,7 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content>
-                      <v-list-tile-title>+49 176 648 50 30 2</v-list-tile-title>
+                      <v-list-tile-title>{{ phoneNumber }}</v-list-tile-title>
                       <v-list-tile-sub-title>Mobile</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -42,7 +42,7 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content>
-                      <v-list-tile-title>wengelef@gmail.com</v-list-tile-title>
+                      <v-list-tile-title>{{ email }}</v-list-tile-title>
                       <v-list-tile-sub-title>Personal</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -55,8 +55,8 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content>
-                      <v-list-tile-title>Bertha-von-Suttner Straße 1</v-list-tile-title>
-                      <v-list-tile-sub-title>53840 Troisdorf</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ street }}</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ city }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
@@ -192,6 +192,10 @@ export default {
       { title: 'About', icon: 'question_answer' }
     ],
     right: null,
+    street: 'Bertha-von-Suttner Str. 1',
+    city: '53840 Troisdorf',
+    phoneNumber: '+49 176 648 50 30 2',
+    email: 'wengelef@gmail.com',
     skills: [
       { text: 'Seasoned in using IntelliJ IDEA or Android Studio for Android Development, Android SDK’s and commonly used third-party-libraries' },
       { text: 'Git version control system' },
