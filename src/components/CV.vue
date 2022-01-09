@@ -79,11 +79,11 @@
                   <v-timeline-item
                     fill-dot
                     right
-                    color="#FDD835">
+                    color="red">
 
-                    <font slot="opposite" size="4" color="#FDD835">since January 2022</font>
+                    <font slot="opposite" size="4" color="red">since January 2022</font>
                     <v-flex class="pa-4">
-                      <div><font size="5" color="#FDD835">appDev GmbH & Co KG</font></div>
+                      <div><font size="5" color="red">appDev GmbH & Co KG</font></div>
                       <div><font size="4" color="#999999">Senior Android Engineer</font></div>
                       <v-divider></v-divider>
                       <v-flex class="pa-4">
@@ -118,10 +118,10 @@
               <div v-responsive.lg.xl>
                 <v-timeline>
                   <div v-for="job in history">
-                    <v-timeline-item fill-dot right color="#1de9b6">
-                      <font slot="opposite" size="4" color="#1de9b6">{{ job.time }}</font>
+                    <v-timeline-item fill-dot right color="orange">
+                      <font slot="opposite" size="4" color="orange">{{ job.time }}</font>
                       <v-flex class="pa-4">
-                        <div><font size="5" color="#1de9b6">{{ job.companyName }}</font></div>
+                        <div><font size="5" color="orange">{{ job.companyName }}</font></div>
                         <div><font size="4" color="#999999">{{ job.title }}</font></div>
                         <v-divider></v-divider>
                         <v-flex class="pa-4">
@@ -141,8 +141,8 @@
               <div v-responsive.md.sm.xs>
                 <div v-for="job in history">
                   <v-flex class="pa-4">
-                    <font size="3" color="#1de9b6">{{ job.time }}</font>
-                    <div><font size="5" color="#1de9b6">{{ job.companyName }}</font></div>
+                    <font size="3" color="orange">{{ job.time }}</font>
+                    <div><font size="5" color="orange">{{ job.companyName }}</font></div>
                     <div><font size="4" color="#999999">{{ job.title }}</font></div>
                     <v-divider></v-divider>
                     <v-flex class="pa-4">
