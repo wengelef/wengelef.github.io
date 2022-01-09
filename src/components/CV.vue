@@ -79,11 +79,11 @@
                   <v-timeline-item
                     fill-dot
                     right
-                    color="#CFD8DC">
+                    color="#FDD835">
 
-                    <font slot="opposite" size="4" color="#CFD8DC">since January 2022</font>
+                    <font slot="opposite" size="4" color="#FDD835">since January 2022</font>
                     <v-flex class="pa-4">
-                      <div><font size="5" color="#CFD8DC">appDev GmbH & Co KG</font></div>
+                      <div><font size="5" color="#FDD835">appDev GmbH & Co KG</font></div>
                       <div><font size="4" color="#999999">Senior Android Engineer</font></div>
                       <v-divider></v-divider>
                       <v-flex class="pa-4">
@@ -99,8 +99,8 @@
               </div>
               <div v-responsive.sm.xs.md>
                 <v-flex class="pa-4">
-                  <div><font size="3" color="#CFD8DC">since January 2022</font></div>
-                  <div><font size="5" color="#CFD8DC">appDev GmbH & Co KG</font></div>
+                  <div><font size="3" color="#FDD835">since January 2022</font></div>
+                  <div><font size="5" color="#FDD835">appDev GmbH & Co KG</font></div>
                   <div><font size="4" color="#999999">Senior Android Engineer</font></div>
                   <v-divider></v-divider>
                   <v-flex class="pa-4">
@@ -117,178 +117,43 @@
             <v-expansion-panel-content readonly>
               <div v-responsive.lg.xl>
                 <v-timeline>
-
-                  <v-timeline-item fill-dot right color="#1de9b6">
-                    <font slot="opposite" size="4" color="#1de9b6">April 2019 - December 2021</font>
-                    <v-flex class="pa-4">
-                      <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
-                      <div><font size="4" color="#999999">Software Engineer</font></div>
-                      <v-divider></v-divider>
+                  <div v-for="job in history">
+                    <v-timeline-item fill-dot right color="#1de9b6">
+                      <font slot="opposite" size="4" color="#1de9b6">{{ job.time }}</font>
                       <v-flex class="pa-4">
-                        <ul>
-                          <li v-for="item in rewe" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
+                        <div><font size="5" color="#1de9b6">{{ job.companyName }}</font></div>
+                        <div><font size="4" color="#999999">{{ job.title }}</font></div>
+                        <v-divider></v-divider>
+                        <v-flex class="pa-4">
+                          <ul>
+                            <li v-for="item in job.items" :key="item.text">
+                              {{ item.text }}
+                            </li>
+                          </ul>
+                        </v-flex>
                       </v-flex>
-                    </v-flex>
-                  </v-timeline-item>
-
-                  <v-timeline-item fill-dot right color="#29B6F6">
-                    <font slot="opposite" size="4" color="#29B6F6">January 2017 - April 2019</font>
-                    <v-flex class="pa-4">
-                      <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
-                      <div><font size="4" color="#999999">Software Engineer</font></div>
-                      <v-divider></v-divider>
-                      <v-flex class="pa-4">
-                        <ul>
-                          <li v-for="item in nextmarkets" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
-                      </v-flex>
-                    </v-flex>
-                  </v-timeline-item>
-
-                  <v-timeline-item fill-dot right color="#f44336">
-                    <font slot="opposite" size="4" color="#f44336">January 2015 - January 2017</font>
-                    <v-flex class="pa-4">
-                      <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
-                      <div><font size="4" color="#999999">Android Developer</font></div>
-                      <v-divider></v-divider>
-                      <v-flex class="pa-4">
-                        <ul>
-                          <li v-for="item in rab" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
-                        <div>Projects:</div>
-                        <ul>
-                          <li v-for="item in rabProjects" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
-                      </v-flex>
-                    </v-flex>
-                  </v-timeline-item>
-
-                  <v-timeline-item
-                    fill-dot
-                    right
-                    color="#FFEE58">
-                    <font slot="opposite" size="4" color="#FFEE58">September 2014 - December 2014</font>
-                    <v-flex class="pa-4">
-                      <div><font size="5" color="#FFEE58">Hottgenroth Software GmbH</font></div>
-                      <div><font size="4" color="#999999">Unity Development internship</font></div>
-                      <v-divider></v-divider>
-                      <v-flex class="pa-4">
-                        <ul>
-                          <li v-for="item in hottgenroth" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
-                      </v-flex>
-                    </v-flex>
-                  </v-timeline-item>
-
-                  <v-timeline-item
-                    fill-dot
-                    right
-                    color="#0097A7">
-                    <font slot="opposite" size="4" color="#0097A7">March 2012 - September 2013</font>
-                    <v-flex class="pa-4">
-                      <div><font size="5" color="#0097A7">Nurogames GmbH</font></div>
-                      <div><font size="4" color="#999999">Android Developer</font></div>
-                      <v-divider></v-divider>
-                      <v-flex class="pa-4">
-                        <ul>
-                          <li v-for="item in nurogames" :key="item.text">
-                            {{ item.text }}
-                          </li>
-                        </ul>
-                      </v-flex>
-                    </v-flex>
-                  </v-timeline-item>
+                    </v-timeline-item>
+                  </div>
                 </v-timeline>
               </div>
 
               <!-- Small -->
               <div v-responsive.md.sm.xs>
-                <v-flex class="pa-4">
-                  <font size="3" color="#1de9b6">April 2019 - December 2021</font>
-                  <div><font size="5" color="#1de9b6">REWE Digital GmbH</font></div>
-                  <div><font size="4" color="#999999">Software Engineer</font></div>
-                  <v-divider></v-divider>
+                <div v-for="job in history">
                   <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in rewe" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
+                    <font size="3" color="#1de9b6">{{ job.time }}</font>
+                    <div><font size="5" color="#1de9b6">{{ job.companyName }}</font></div>
+                    <div><font size="4" color="#999999">{{ job.title }}</font></div>
+                    <v-divider></v-divider>
+                    <v-flex class="pa-4">
+                      <ul>
+                        <li v-for="item in job.items" :key="item.text">
+                          {{ item.text }}
+                        </li>
+                      </ul>
+                    </v-flex>
                   </v-flex>
-                </v-flex>
-
-                <v-flex class="pa-4">
-                  <font size="3" color="#29B6F6">January 2017 - April 2019</font>
-                  <div><font size="5" color="#29B6F6">nextmarkets GmbH</font></div>
-                  <div><font size="4" color="#999999">Software Engineer</font></div>
-                  <v-divider></v-divider>
-                  <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in nextmarkets" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                  </v-flex>
-                </v-flex>
-
-                <v-flex class="pa-4">
-                  <font size="3" color="#f44336">January 2015 - January 2017</font>
-                  <div><font size="5" color="#f44336">RockAByte GmbH</font></div>
-                  <div><font size="4" color="#999999">Android Developer</font></div>
-                  <v-divider></v-divider>
-                  <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in rab" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                    <div>Projects:</div>
-                    <ul>
-                      <li v-for="item in rabProjects" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                  </v-flex>
-                </v-flex>
-                
-                <v-flex class="pa-4">
-                  <font size="3" color="#FFEE58">September 2014 - December 2014</font>
-                  <div><font size="5" color="#FFEE58">Hottgenroth Software GmbH</font></div>
-                  <div><font size="4" color="#999999">Unity Development internship</font></div>
-                  <v-divider></v-divider>
-                  <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in hottgenroth" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                  </v-flex>
-                </v-flex>
-                
-                <v-flex class="pa-4">
-                  <font size="3" color="#0097A7">March 2012 - September 2013</font>
-                  <div><font size="5" color="#0097A7">Nurogames GmbH</font></div>
-                  <div><font size="4" color="#999999">Android Developer</font></div>
-                  <v-divider></v-divider>
-                  <v-flex class="pa-4">
-                    <ul>
-                      <li v-for="item in nurogames" :key="item.text">
-                        {{ item.text }}
-                      </li>
-                    </ul>
-                  </v-flex>
-                </v-flex>
+                </div>
               </div>
             </v-expansion-panel-content>
 
@@ -344,29 +209,79 @@ export default {
       { text: 'Up to speed with technical advancements of Android' },
       { text: 'Wannabe functionalist' },
     ],
+    history: [
+      {
+        companyName: 'REWE Digital GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'April 2019 - December 2021',
+        title: 'Software Engineer',
+        items: [
+          { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
+          { text: 'Maintenance of the legacy REWE Android App' },
+          { text: 'Creating mobile service endpoints' },
+          { text: 'Unit- and Integration testing' },
+        ],
+      },
+      {
+        companyName: 'nextmarkets GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'January 2017 - April 2019',
+        title: 'Software Engineer',
+        items: [
+          { text: 'Development of the native Android Client in Kotlin for the CFD Trading Platform nextmarkets' },
+          { text: 'Migration of existing Java code to Kotlin' },
+          { text: 'Unit- and Integration testing' },
+          { text: 'Supporting Design and Usability Concepts' },
+        ],
+      },
+      {
+        companyName: 'RockAByte GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'January 2015 - January 2017',
+        title: 'Android Developer',
+        items: [
+          { text: 'Hands on development of Android applications' },
+          { text: 'Working on multiple projects independently as well as in agile teams' },
+          { text: 'Maintaining stability of projects' },
+          { text: 'Improving usability and design of existing apps' },
+          { text: 'Unit- and Integration testing' },
+          { text: 'Minor C++ programming of cross-platform utility tools' },
+          { text: 'Help identify and reduce crash rates of legacy applications and improving code quality' },
+        ],
+      },
+      {
+        companyName: 'Hottgenroth Software GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'September 2014 - December 2014',
+        title: 'Unity Development internship',
+        items: [
+          { text: 'Unity programming support for a mobile app to acquire building data on a smartphone or tablet' },
+          { text: 'Creating 3D-Models with Blender' }
+        ],
+      },
+      {
+        companyName: 'Nurogames GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'March 2012 - September 2013',
+        title: 'Android Developer',
+        items: [
+          { text: 'Cross-platform mobile game development in C++ with Cocos2D-X for iOS and Android' },
+          { text: 'Expanding the internal game engine' }
+        ],
+      },
+    ],
     appDev: [
       { text: 'IBM' },
-    ],
-    rewe: [
-      { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
-      { text: 'Maintenance of the legacy REWE Android App' },
-      { text: 'Creating mobile service endpoints' },
-      { text: 'Unit- and Integration testing' },
-    ],
-    nextmarkets: [
-      { text: 'Development of the native Android Client in Kotlin for the CFD Trading Platform nextmarkets' },
-      { text: 'Migration of existing Java code to Kotlin' },
-      { text: 'Unit- and Integration testing' },
-      { text: 'Supporting Design and Usability Concepts' },
-    ],
-    rab: [
-      { text: 'Hands on development of Android applications' },
-      { text: 'Working on multiple projects independently as well as in agile teams' },
-      { text: 'Maintaining stability of projects' },
-      { text: 'Improving usability and design of existing apps' },
-      { text: 'Unit- and Integration testing' },
-      { text: 'Minor C++ programming of cross-platform utility tools' },
-      { text: 'Help identify and reduce crash rates of legacy applications and improving code quality' },
     ],
     rabProjects: [
       { text: 'WaipuTV' },
@@ -376,14 +291,6 @@ export default {
       { text: 'Travian: Kingdoms' },
       { text: 'INFOnline (Library)' },
       { text: 'SportScheck (Legacy)' },
-    ],
-    hottgenroth: [
-      { text: 'Unity programming support for a mobile app to acquire building data on a smartphone or tablet' },
-      { text: 'Creating 3D-Models with Blender' }
-    ],
-    nurogames: [
-      { text: 'Cross-platform mobile game development in C++ with Cocos2D-X for iOS and Android' },
-      { text: 'Expanding the internal game engine' }
     ],
     backlog: [
       { 
