@@ -1,0 +1,381 @@
+<template>
+  <v-app dark>
+    <v-content>
+
+      <v-container fluid>
+        <v-layout>
+          <v-flex text-xs-center>
+            <v-btn round :outline="outlineContact" color="green" @click="contactClick">Contact</v-btn>
+            <v-btn round :outline="outlineSkills" color="teal" @click="skillsClick">Skills</v-btn>
+            <v-btn round :outline="outlineCurrently" color="red" @click="currentlyClick">In Progress</v-btn>
+            <v-btn round :outline="outlinePast" color="orange" @click="pastClick">Done</v-btn>
+            <v-btn round :outline="outlineBacklog" color="blue" @click="backlogClick">Backlog</v-btn>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
+      <v-flex xs12 sm8 offset-sm2>
+          <v-expansion-panel 
+            popout 
+            v-model="expands" expand>
+
+            <v-expansion-panel-content readonly>
+              <v-flex class="pa-4">
+                <v-list 
+                  two-line>
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon color="white">phone</v-icon>
+                    </v-list-tile-action>
+
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{ phoneNumber }}</v-list-tile-title>
+                      <v-list-tile-sub-title>Mobile</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+
+                  <v-divider inset></v-divider>
+
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon color="white">mail</v-icon>
+                    </v-list-tile-action>
+
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{ email }}</v-list-tile-title>
+                      <v-list-tile-sub-title>Personal</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+
+                  <v-divider inset></v-divider>
+
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon color="white">location_on</v-icon>
+                    </v-list-tile-action>
+
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{ street }}</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ city }}</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-flex>
+            </v-expansion-panel-content>
+
+            <v-expansion-panel-content readonly>
+              <v-flex class="pa-4">
+                <ul>
+                  <li v-for="item in skills" :key="item.text">
+                    {{ item.text }}
+                  </li>
+                </ul>
+              </v-flex>
+            </v-expansion-panel-content>
+
+            <v-expansion-panel-content readonly>
+              <div v-responsive.lg.xl>
+                <v-timeline>
+                  <v-timeline-item
+                    fill-dot
+                    right
+                    color="red">
+
+                    <font slot="opposite" size="4" color="red">since January 2022</font>
+                    <v-flex class="pa-4">
+                      <div><font size="5" color="red">appDev GmbH & Co KG</font></div>
+                      <div><font size="4" color="#999999">Senior Android & KMP Engineer / Team Lead</font></div>
+                      <v-divider></v-divider>
+                      <v-flex class="pa-4">
+                        <ul>
+                          <li v-for="item in appDev" :key="item.text">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+                      </v-flex>
+                    </v-flex>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
+              <div v-responsive.sm.xs.md>
+                <v-flex class="pa-4">
+                  <div><font size="3" color="#FDD835">since January 2022</font></div>
+                  <div><font size="5" color="#FDD835">appDev GmbH & Co KG</font></div>
+                  <div><font size="4" color="#999999">Senior Android & KMP Engineer / Team Lead</font></div>
+                  <v-divider></v-divider>
+                  <v-flex class="pa-4">
+                    <ul>
+                      <li v-for="item in appDev" :key="item.text">
+                        {{ item.text }}
+                      </li>
+                    </ul>
+                  </v-flex>
+                </v-flex>
+              </div>
+            </v-expansion-panel-content>
+
+            <v-expansion-panel-content readonly>
+              <div v-responsive.lg.xl>
+                <v-timeline>
+                  <div v-for="job in history">
+                    <v-timeline-item fill-dot right color="orange">
+                      <font slot="opposite" size="4" color="orange">{{ job.time }}</font>
+                      <v-flex class="pa-4">
+                        <div><font size="5" color="orange">{{ job.companyName }}</font></div>
+                        <div><font size="4" color="#999999">{{ job.title }}</font></div>
+                        <v-divider></v-divider>
+                        <v-flex class="pa-4">
+                          <ul>
+                            <li v-for="item in job.items" :key="item.text">
+                              {{ item.text }}
+                            </li>
+                          </ul>
+                        </v-flex>
+                      </v-flex>
+                    </v-timeline-item>
+                  </div>
+                </v-timeline>
+              </div>
+
+              <!-- Small -->
+              <div v-responsive.md.sm.xs>
+                <div v-for="job in history">
+                  <v-flex class="pa-4">
+                    <font size="3" color="orange">{{ job.time }}</font>
+                    <div><font size="5" color="orange">{{ job.companyName }}</font></div>
+                    <div><font size="4" color="#999999">{{ job.title }}</font></div>
+                    <v-divider></v-divider>
+                    <v-flex class="pa-4">
+                      <ul>
+                        <li v-for="item in job.items" :key="item.text">
+                          {{ item.text }}
+                        </li>
+                      </ul>
+                    </v-flex>
+                  </v-flex>
+                </div>
+              </div>
+            </v-expansion-panel-content>
+
+            <v-expansion-panel-content readonly>
+              <v-flex class="pa-4">
+                <ul v-for="item in backlog" :key="item.title">
+                  <a :href="item.url">{{ item.title }}</a>
+                  <v-flex class="pl-4 pb-4 pt-2">
+                    <li v-for="text in item.texts" :key="text">
+                      {{ text }}
+                    </li>
+                  </v-flex>
+                </ul>
+              </v-flex>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-flex>
+    </v-content>
+
+    
+  </v-app>
+</template>
+
+<script>
+export default {
+  name: 'CV',
+  data: () => ({
+    outlineContact: true,
+    outlineSkills: false,
+    outlineCurrently: false,
+    outlinePast: false,
+    outlineBacklog: true,
+    expands: [false, true, true, true, false],
+    items: [
+      { title: 'Home', icon: 'dashboard' },
+      { title: 'About', icon: 'question_answer' }
+    ],
+    right: null,
+    street: 'Bertha-von-Suttner Str. 1',
+    city: '53840 Troisdorf',
+    phoneNumber: '+49 176 648 50 30 2',
+    email: 'wengelef@gmail.com',
+    skills: [
+      { text: 'Learning the new and fancy agentic stuff (claude, gemini-cli)' },
+      { text: 'Seasoned in using IntelliJ IDEA or Android Studio for Android Development, Android SDK’s and commonly used third-party-libraries' },
+      { text: 'Git version control system' },
+      { text: 'Understanding of the importance of code quality and continuous integration (Unit Testing, static code analysis, Jenkins CI, Fabric/Firebase)' },
+      { text: 'Broad development knowledge of Kotlin' },
+      { text: 'Enthusiastic about Material Design and Mobile User Experience' },
+      { text: 'Clean Architecture and Design Patterns' },
+      { text: 'Functional Reactive Programming (RxJava)' },
+      { text: 'Implementing RESTful Clients is second nature (Retrofit 2, Volley)' },
+      { text: 'ORMs and NoSQL (Realm, GreenDAO, ActiveAndroid, SQL Delight)' },
+      { text: 'Working in agile environments (Scrum, Kanban)' },
+    ],
+    history: [
+      {
+        companyName: 'REWE Digital GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'April 2019 - December 2021',
+        title: 'Software Engineer',
+        items: [
+          { text: 'Development of the native Android Client in Kotlin for the new REWE mobile App experience' },
+          { text: 'Maintenance of the legacy REWE Android App' },
+          { text: 'Creating mobile service endpoints' },
+          { text: 'Unit- and Integration testing' },
+        ],
+      },
+      {
+        companyName: 'nextmarkets GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'January 2017 - April 2019',
+        title: 'Software Engineer',
+        items: [
+          { text: 'Development of the native Android Client in Kotlin for the CFD Trading Platform nextmarkets' },
+          { text: 'Migration of existing Java code to Kotlin' },
+          { text: 'Unit- and Integration testing' },
+          { text: 'Supporting Design and Usability Concepts' },
+        ],
+      },
+      {
+        companyName: 'RockAByte GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'January 2015 - January 2017',
+        title: 'Android Developer',
+        items: [
+          { text: 'Hands on development of Android applications' },
+          { text: 'Working on multiple projects independently as well as in agile teams' },
+          { text: 'Maintaining stability of projects' },
+          { text: 'Improving usability and design of existing apps' },
+          { text: 'Unit- and Integration testing' },
+          { text: 'Minor C++ programming of cross-platform utility tools' },
+          { text: 'Help identify and reduce crash rates of legacy applications and improving code quality' },
+        ],
+      },
+      {
+        companyName: 'Hottgenroth Software GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'September 2014 - December 2014',
+        title: 'Unity Development internship',
+        items: [
+          { text: 'Unity programming support for a mobile app to acquire building data on a smartphone or tablet' },
+          { text: 'Creating 3D-Models with Blender' }
+        ],
+      },
+      {
+        companyName: 'Nurogames GmbH',
+        style: {
+          color: "1de9b6",
+        },
+        time: 'March 2012 - September 2013',
+        title: 'Android Developer',
+        items: [
+          { text: 'Cross-platform mobile game development in C++ with Cocos2D-X for iOS and Android' },
+          { text: 'Expanding the internal game engine' }
+        ],
+      },
+    ],
+    appDev: [
+      { text: 'Contributed to the development of the ePA white-label healthcare SDK for insurance providers, focusing on modules like the medication plan, document management, push notifications, digital vaccination pass, E-Prescription, and consent management, etc.' },
+      { text: 'Developed cross-platform modules using KMP for backend communication and business logic consumed by Android and iOS. Built out native UI components using Jetpack Compose following Design specifications from Figma, including strong accessibility support' },
+      { text: 'Functioned as Team Lead, collaborating across the team from requirements engineering through to implementation and final QA; worked closely with iOS Engineers to align platform delivery' },
+    ],
+    rabProjects: [
+      { text: 'WaipuTV' },
+      { text: 'Grenoble MNA (event-based mobile usage statistics application, scientific purpose, closed beta only)' },
+      { text: 'RheinEnergie Heimvorteil and its BELKAW derivate' },
+      { text: 'RheinEnergie OnlineService and its BELKAW and Stadtwerke Leichlingen derivatives' },
+      { text: 'Travian: Kingdoms' },
+      { text: 'INFOnline (Library)' },
+      { text: 'SportScheck (Legacy)' },
+    ],
+    backlog: [
+      { 
+        title: 'Validate',
+        url: 'https://github.com/wengelef/validate',
+        texts: [ 'Validation DSL for Kotlin Objects' ]
+      },
+      { 
+        title: 'Functional Android',
+        url: 'https://github.com/wengelef/FunctionalAndroid',
+        texts: [ 'Android Sample Application using Clean Architecture and FunctionalProgramming Paradigms' ]
+      },
+      { 
+        title: 'Ktor mobile push gateway',
+        url: 'https://github.com/wengelef/ktor_pushgw',
+        texts: [ 'Push gateway for iOS and Android using Firebase' ]
+      },
+      { 
+        title: 'RxFileUtils',
+        url: 'https://github.com/wengelef/RxFileUtils',
+        texts: [ 'Reactive File Utilities for the Android File System' ]
+      },
+      { 
+        title: 'Builder',
+        url: 'https://github.com/wengelef/Builder',
+        texts: [ 'Java Annotation (@Builder) and AnnotationProcessor', 'Generates Builder classes for POJO’s' ]
+      }
+    ],
+  }),
+  methods: {
+    currentlyClick: function (event) {
+      this.outlineCurrently = !this.outlineCurrently
+      this.expands = [
+        !this.outlineContact,
+        !this.outlineSkills,
+        !this.outlineCurrently,
+        !this.outlinePast,
+        !this.outlineBacklog]
+    },
+    skillsClick: function (event) {
+      this.outlineSkills = !this.outlineSkills
+      this.expands = [
+        !this.outlineContact,
+        !this.outlineSkills,
+        !this.outlineCurrently,
+        !this.outlinePast,
+        !this.outlineBacklog]
+    },
+    pastClick: function (event) {
+      this.outlinePast = !this.outlinePast
+      this.expands = [
+        !this.outlineContact,
+        !this.outlineSkills,
+        !this.outlineCurrently,
+        !this.outlinePast,
+        !this.outlineBacklog]
+    },
+    backlogClick: function (event) {
+      this.outlineBacklog = !this.outlineBacklog
+      this.expands = [
+        !this.outlineContact,
+        !this.outlineSkills,
+        !this.outlineCurrently,
+        !this.outlinePast,
+        !this.outlineBacklog]
+    },
+    contactClick: function (event) {
+      this.outlineContact = !this.outlineContact
+      this.expands = [
+        !this.outlineContact,
+        !this.outlineSkills,
+        !this.outlineCurrently,
+        !this.outlinePast,
+        !this.outlineBacklog]
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+  ul li {
+    font-size: 20px
+  }
+
+</style>
