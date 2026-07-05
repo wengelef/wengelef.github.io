@@ -8,5 +8,5 @@ echo deploy...
 git init
 git add -A
 git commit -m "deploy"
-git push -f https://github.com/wengelef/wengelef.github.io.git master
+git push -f https://github.com/wengelef/wengelef.github.io.git main:master
 echo done
