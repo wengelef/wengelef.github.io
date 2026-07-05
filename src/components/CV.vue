@@ -84,7 +84,7 @@
                     <font slot="opposite" size="4" color="red">since January 2022</font>
                     <v-flex class="pa-4">
                       <div><font size="5" color="red">appDev GmbH & Co KG</font></div>
-                      <div><font size="4" color="#999999">Senior Android Engineer</font></div>
+                      <div><font size="4" color="#999999">Senior Android & KMP Engineer / Team Lead</font></div>
                       <v-divider></v-divider>
                       <v-flex class="pa-4">
                         <ul>
@@ -101,7 +101,7 @@
                 <v-flex class="pa-4">
                   <div><font size="3" color="#FDD835">since January 2022</font></div>
                   <div><font size="5" color="#FDD835">appDev GmbH & Co KG</font></div>
-                  <div><font size="4" color="#999999">Senior Android Engineer</font></div>
+                  <div><font size="4" color="#999999">Senior Android & KMP Engineer / Team Lead</font></div>
                   <v-divider></v-divider>
                   <v-flex class="pa-4">
                     <ul>
@@ -197,21 +197,17 @@ export default {
     phoneNumber: '+49 176 648 50 30 2',
     email: 'wengelef@gmail.com',
     skills: [
+      { text: 'Learning the new and fancy agentic stuff (claude, gemini-cli)' },
       { text: 'Seasoned in using IntelliJ IDEA or Android Studio for Android Development, Android SDK’s and commonly used third-party-libraries' },
       { text: 'Git version control system' },
       { text: 'Understanding of the importance of code quality and continuous integration (Unit Testing, static code analysis, Jenkins CI, Fabric/Firebase)' },
       { text: 'Broad development knowledge of Kotlin' },
       { text: 'Enthusiastic about Material Design and Mobile User Experience' },
-      { text: 'MVVM and MVP architecture' },
       { text: 'Clean Architecture and Design Patterns' },
       { text: 'Functional Reactive Programming (RxJava)' },
       { text: 'Implementing RESTful Clients is second nature (Retrofit 2, Volley)' },
       { text: 'ORMs and NoSQL (Realm, GreenDAO, ActiveAndroid, SQL Delight)' },
-      { text: 'Dependency injection (Dagger 2, Koin)' },
-      { text: 'Active StackOverflow community member' },
       { text: 'Working in agile environments (Scrum, Kanban)' },
-      { text: 'Up to speed with technical advancements of Android' },
-      { text: 'Wannabe functionalist' },
     ],
     history: [
       {
@@ -285,7 +281,9 @@ export default {
       },
     ],
     appDev: [
-      { text: 'IBM' },
+      { text: 'Contributed to the development of the ePA white-label healthcare SDK for insurance providers, focusing on modules like the medication plan, document management, push notifications, digital vaccination pass, E-Prescription, and consent management, etc.' },
+      { text: 'Developed cross-platform modules using KMP for backend communication and business logic consumed by Android and iOS. Built out native UI components using Jetpack Compose following Design specifications from Figma, including strong accessibility support' },
+      { text: 'Functioned as Team Lead, collaborating across the team from requirements engineering through to implementation and final QA; worked closely with iOS Engineers to align platform delivery' },
     ],
     rabProjects: [
       { text: 'WaipuTV' },
