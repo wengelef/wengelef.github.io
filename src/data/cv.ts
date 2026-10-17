@@ -139,3 +139,11 @@ export const projects: Project[] = [
     texts: ['Java Annotation (@Builder) and AnnotationProcessor', 'Generates Builder classes for POJO’s'],
   },
 ]
+
+export const interests = {
+  ari: { title: 'Ari', text: 'My pup and favorite coworker. Walks, fetch and zoomies.' },
+  fitness: { title: 'Fitness', text: 'Lifting and staying active to balance the desk.' },
+  finance: { title: 'Finance', text: 'Markets, investing and long-term thinking.' },
+  travel: { title: 'Traveling', text: 'Exploring new places, food and cultures.' },
+  gaming: { title: 'Gaming', text: 'Long-time gamer, from RPGs to co-op nights.' },
+}

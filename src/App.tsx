@@ -2,6 +2,7 @@ import { ActivitySection } from '@/components/activity-section'
 import { ContactSection } from '@/components/contact-section'
 import { ExperienceTimeline } from '@/components/experience-timeline'
 import { Hero } from '@/components/hero'
+import { InterestsSection } from '@/components/interests-section'
 import { ProjectsSection } from '@/components/projects-section'
 import { SiteHeader } from '@/components/site-header'
 import { SkillsSection } from '@/components/skills-section'
@@ -23,6 +24,7 @@ export default function App() {
         <SkillsSection />
         <ExperienceTimeline />
         <ActivitySection />
+        <InterestsSection />
         <ProjectsSection />
       </main>
       <footer className="text-muted-foreground border-t py-8 text-center text-sm">
