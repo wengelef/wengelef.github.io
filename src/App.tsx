@@ -4,10 +4,10 @@ import { ContactSection } from '@/components/contact-section'
 import { ExperienceTimeline } from '@/components/experience-timeline'
 import { Hero } from '@/components/hero'
 import { ProjectsSection } from '@/components/projects-section'
+import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { SkillsSection } from '@/components/skills-section'
 import { DotPattern } from '@/components/ui/dot-pattern'
-import { profile } from '@/data/cv'
 
 // Below-the-fold sections that pull in heavy deps (heatmap, world map) load as separate chunks.
 const ActivitySection = lazy(() =>
@@ -16,8 +16,6 @@ const ActivitySection = lazy(() =>
 const InterestsSection = lazy(() =>
   import('@/components/interests-section').then((m) => ({ default: m.InterestsSection })),
 )
-
-const year = new Date().getFullYear()
 
 export default function App() {
   return (
@@ -37,9 +35,7 @@ export default function App() {
         </Suspense>
         <ProjectsSection />
       </main>
-      <footer className="text-muted-foreground border-t py-8 text-center text-sm">
-        © {year} {profile.name}
-      </footer>
+      <SiteFooter />
     </>
   )
 }
