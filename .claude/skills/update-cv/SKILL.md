@@ -11,6 +11,7 @@ All content lives in `src/data/cv.ts`. Components only render it.
 - **Skill bullet**: add a string to `skills`. To add a logo to the Icon Cloud, import `si<Name>` from `simple-icons` in `src/components/skills-section.tsx` and append it to `brandIcons` (check the export exists first).
 - **Project**: add `{ title, url, texts }` to `projects`.
 - **Contact / title**: edit `contact` / `profile`.
+- **GitHub activity heatmap**: accounts are listed in `src/data/github.json` (`logins`, counts are summed). Refresh the committed snapshot with `GITHUB_TOKEN=$(gh auth token) npm run fetch:contributions`; CI also refreshes it on every deploy and daily.
 - **Hero image**: replace `src/assets/avatar.jpg` (lg+) and `src/assets/avatar_xs.jpg` (small screens), keeping the file names. Do not convert to grayscale; CSS does that.
 
 Then run `npm run build` and `npm run lint`, and preview with `npm run preview`. Commit to `master` to deploy (GitHub Action); never commit `dist/`.

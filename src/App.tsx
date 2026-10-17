@@ -1,3 +1,4 @@
+import { ActivitySection } from '@/components/activity-section'
 import { ContactSection } from '@/components/contact-section'
 import { ExperienceTimeline } from '@/components/experience-timeline'
 import { Hero } from '@/components/hero'
@@ -17,6 +18,7 @@ export default function App() {
         <ContactSection />
         <SkillsSection />
         <ExperienceTimeline />
+        <ActivitySection />
         <ProjectsSection />
       </main>
       <footer className="text-muted-foreground border-t py-8 text-center text-sm">

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import {
   siAndroid,
   siAndroidstudio,
@@ -25,24 +25,13 @@ import { Section } from '@/components/section'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { IconCloud } from '@/components/ui/icon-cloud'
 import { skills } from '@/data/cv'
+import { useIsDark } from '@/lib/use-is-dark'
 
 const brandIcons = [
   siKotlin, siAndroid, siAndroidstudio, siIntellijidea, siJetpackcompose, siOpenjdk, siGradle,
   siSwift, siApple, siGit, siGithub, siGithubactions, siJenkins, siFirebase, siKtor, siSqlite,
   siMaterialdesign, siFigma, siClaude,
 ]
-
-function useIsDark() {
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
-  useEffect(() => {
-    const observer = new MutationObserver(() =>
-      setDark(document.documentElement.classList.contains('dark')),
-    )
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
-    return () => observer.disconnect()
-  }, [])
-  return dark
-}
 
 export function SkillsSection() {
   const dark = useIsDark()
