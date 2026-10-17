@@ -47,16 +47,33 @@ function personJsonLd() {
   }
 }
 
+// The hero image is the LCP element but is only discovered once the JS has rendered it, so preload it.
+// The media queries mirror the <source> / <img> pair in hero.tsx.
+function heroPreloads(files: string[]) {
+  const preload = (re: RegExp, media: string) => {
+    const file = files.find((f) => re.test(f))
+    return file && `<link rel="preload" as="image" href="/${file}" media="${media}" fetchpriority="high" />`
+  }
+  return [
+    preload(/^assets\/avatar_xs-[\w-]+\.webp$/, '(max-width: 1023px)'),
+    preload(/^assets\/avatar-[\w-]+\.webp$/, '(min-width: 1024px)'),
+  ].filter(Boolean)
+}
+
 export function seo(): Plugin {
   return {
     name: 'seo',
     apply: 'build',
-    transformIndexHtml(html) {
-      // `<` is escaped so the JSON can never close the script tag.
-      const jsonLd = JSON.stringify(personJsonLd()).replace(/</g, '\u003c')
-      return html
-        .replace('</head>', `    <script type="application/ld+json">${jsonLd}</script>\n  </head>`)
-        .replace('<div id="root"></div>', `<div id="root">${fallbackHtml()}</div>`)
+    transformIndexHtml: {
+      order: 'post',
+      handler(html, ctx) {
+        // `<` is escaped so the JSON can never close the script tag.
+        const jsonLd = JSON.stringify(personJsonLd()).replace(/</g, '<')
+        const head = [...heroPreloads(Object.keys(ctx.bundle ?? {})), `<script type="application/ld+json">${jsonLd}</script>`]
+        return html
+          .replace('</head>', `    ${head.join('\n    ')}\n  </head>`)
+          .replace('<div id="root"></div>', `<div id="root">${fallbackHtml()}</div>`)
+      },
     },
   }
 }
