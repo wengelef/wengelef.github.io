@@ -13,7 +13,7 @@ import { useIsDark } from '@/lib/use-is-dark'
 import { cn } from '@/lib/utils'
 
 const photos = Object.values(
-  import.meta.glob<string>('@/assets/ari/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' }),
+  import.meta.glob<string>('@/assets/ari/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default', query: '?w=800&format=webp&quality=75' }),
 )
 
 function Tile({

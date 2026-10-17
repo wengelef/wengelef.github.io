@@ -1,5 +1,5 @@
-import avatar from '@/assets/avatar.jpg'
-import avatarXs from '@/assets/avatar_xs.jpg'
+import avatar from '@/assets/avatar.jpg?format=webp&quality=75'
+import avatarXs from '@/assets/avatar_xs.jpg?w=800&format=webp&quality=75'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { profile } from '@/data/cv'
 
@@ -12,6 +12,7 @@ export function Hero() {
         <img
           src={avatarXs}
           alt={profile.name}
+          fetchPriority="high"
           className="absolute inset-0 size-full object-cover grayscale contrast-110"
         />
       </picture>

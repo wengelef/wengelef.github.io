@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 
-import avatar from '@/assets/profile.png'
+import avatar from '@/assets/profile.png?w=64&format=webp'
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler'
 import { profile } from '@/data/cv'
 import { useScrolledPast } from '@/lib/use-scrolled-past'
@@ -26,6 +26,7 @@ export function SiteHeader() {
               <motion.img
                 src={avatar}
                 alt=""
+                decoding="async"
                 className="mr-2 size-8 shrink-0 rounded-full grayscale"
                 initial={{ opacity: 0, scale: 0, width: 0, marginRight: 0 }}
                 animate={{ opacity: 1, scale: 1, width: 32, marginRight: 8 }}
