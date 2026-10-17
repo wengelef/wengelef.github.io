@@ -1,9 +1,8 @@
-import { Mail, Phone } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 
 import avatar from '@/assets/profile.png'
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler'
-import { contactHrefs, profile } from '@/data/cv'
+import { profile } from '@/data/cv'
 import { useScrolledPast } from '@/lib/use-scrolled-past'
 
 const links = [
@@ -13,16 +12,9 @@ const links = [
   { href: '#projects', label: 'Projects' },
 ]
 
-const quickContacts = [
-  { icon: Phone, label: 'Call', href: contactHrefs.phone, tone: 'text-emerald-600 dark:text-emerald-400' },
-  { icon: Mail, label: 'Email', href: contactHrefs.email, tone: 'text-sky-600 dark:text-sky-400' },
-]
-
-const iconButton = 'hover:bg-accent inline-flex size-9 items-center justify-center rounded-md transition-colors'
 
 export function SiteHeader() {
   const pastHero = useScrolledPast('top')
-  const pastContact = useScrolledPast('contact')
 
   return (
     <header className="bg-background/70 sticky top-0 z-50 border-b backdrop-blur-md">
@@ -53,23 +45,7 @@ export function SiteHeader() {
               {l.label}
             </a>
           ))}
-          <AnimatePresence initial={false}>
-            {pastContact &&
-              quickContacts.map(({ icon: Icon, label, href, tone }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className={`${iconButton} ${tone}`}
-                  initial={{ opacity: 0, x: 8 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 8 }}
-                >
-                  <Icon className="size-5" />
-                </motion.a>
-              ))}
-          </AnimatePresence>
-          <AnimatedThemeToggler className={`${iconButton} [&_svg]:size-5`} />
+          <AnimatedThemeToggler className="hover:bg-accent [&_svg]:size-5 inline-flex size-9 items-center justify-center rounded-md transition-colors" />
         </nav>
       </div>
     </header>
