@@ -5,6 +5,7 @@ import 'react-activity-calendar/tooltips.css'
 import { Section } from '@/components/section'
 import { BlurFade } from '@/components/ui/blur-fade'
 import contributions from '@/data/contributions.json'
+import { links } from '@/data/cv'
 import { useIsDark } from '@/lib/use-is-dark'
 
 const data = contributions as Activity[]
@@ -49,7 +50,7 @@ export function ActivitySection() {
         <p className="text-muted-foreground mt-3 text-sm">
           {total} contributions in the last year on{' '}
           <a
-            href="https://github.com/wengelef"
+            href={links.github}
             target="_blank"
             rel="noreferrer"
             className="hover:text-brand text-foreground decoration-brand underline underline-offset-4 transition-colors"

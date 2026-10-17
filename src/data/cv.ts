@@ -147,3 +147,8 @@ export const interests = {
   travel: { title: 'Traveling', text: 'Exploring new places, food and cultures.' },
   gaming: { title: 'Gaming', text: 'Long-time gamer, from RPGs to co-op nights.' },
 }
+
+// Used for the Activity link and the schema.org `sameAs` links. Add `linkedin` here to include it.
+export const links: { github: string; linkedin?: string } = {
+  github: 'https://github.com/wengelef',
+}
