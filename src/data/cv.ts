@@ -151,4 +151,5 @@ export const interests = {
 // Used for the Activity link and the schema.org `sameAs` links. Add `linkedin` here to include it.
 export const links: { github: string; linkedin?: string } = {
   github: 'https://github.com/wengelef',
+  linkedin: 'https://www.linkedin.com/in/florian-wengelewski',
 }
