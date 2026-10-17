@@ -61,7 +61,7 @@ export function SkillsSection() {
   return (
     <Section id="skills" title="Skills">
       <div className="grid items-center gap-8 md:grid-cols-2">
-        <BlurFade inView className="flex justify-center">
+        <BlurFade inView className="flex justify-center md:order-last">
           <div className="max-w-full [&_canvas]:h-auto [&_canvas]:max-w-full">
             <IconCloud icons={icons} showControl={false} />
           </div>
