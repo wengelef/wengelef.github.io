@@ -14,7 +14,7 @@ export const contactHrefs = {
 
 export interface SkillGroup {
   title: string
-  icon: 'mobile' | 'architecture' | 'quality' | 'agentic' | 'team'
+  icon: 'mobile' | 'web' | 'architecture' | 'quality' | 'agentic' | 'team'
   summary: string
   tags: string[]
 }
@@ -25,6 +25,12 @@ export const skills: SkillGroup[] = [
     icon: 'mobile',
     summary: 'Android and Kotlin Multiplatform, with a love for Material Design and mobile UX',
     tags: ['Kotlin', 'Java', 'Kotlin Multiplatform', 'Android SDK', 'Android Studio / IntelliJ', 'Material Design'],
+  },
+  {
+    title: 'Web',
+    icon: 'web',
+    summary: 'Modern web frontends, like this site',
+    tags: ['React', 'TypeScript', 'JavaScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'GitHub Pages'],
   },
   {
     title: 'Architecture',
@@ -160,6 +166,11 @@ export const projects: Project[] = [
     title: 'Builder',
     url: 'https://github.com/wengelef/Builder',
     texts: ['Java Annotation (@Builder) and AnnotationProcessor', 'Generates Builder classes for POJO’s'],
+  },
+  {
+    title: 'This website',
+    url: 'https://github.com/wengelef/wengelef.github.io',
+    texts: ['Personal CV site built with React, TypeScript, Vite and Tailwind CSS, developed with Claude Code'],
   },
 ]
 

@@ -1,4 +1,4 @@
-import { Blocks, Bot, ShieldCheck, Smartphone, Users } from 'lucide-react'
+import { Blocks, Bot, Globe, ShieldCheck, Smartphone, Users } from 'lucide-react'
 import { useMemo } from 'react'
 import {
   siAndroid,
@@ -13,13 +13,18 @@ import {
   siGradle,
   siIntellijidea,
   siJenkins,
+  siJavascript,
   siJetpackcompose,
   siKotlin,
   siKtor,
   siMaterialdesign,
   siOpenjdk,
+  siReact,
   siSqlite,
   siSwift,
+  siTailwindcss,
+  siTypescript,
+  siVite,
 } from 'simple-icons'
 
 import { Section } from '@/components/section'
@@ -31,6 +36,7 @@ import { useIsDark } from '@/lib/use-is-dark'
 
 const groupIcons: Record<SkillGroup['icon'], { icon: typeof Smartphone; tone: string }> = {
   mobile: { icon: Smartphone, tone: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' },
+  web: { icon: Globe, tone: 'bg-orange-500/10 text-orange-600 dark:text-orange-400' },
   architecture: { icon: Blocks, tone: 'bg-sky-500/10 text-sky-600 dark:text-sky-400' },
   quality: { icon: ShieldCheck, tone: 'bg-amber-500/10 text-amber-600 dark:text-amber-400' },
   agentic: { icon: Bot, tone: 'bg-violet-500/10 text-violet-600 dark:text-violet-400' },
@@ -40,7 +46,7 @@ const groupIcons: Record<SkillGroup['icon'], { icon: typeof Smartphone; tone: st
 const brandIcons = [
   siKotlin, siAndroid, siAndroidstudio, siIntellijidea, siJetpackcompose, siOpenjdk, siGradle,
   siSwift, siApple, siGit, siGithub, siGithubactions, siJenkins, siFirebase, siKtor, siSqlite,
-  siMaterialdesign, siFigma, siClaude,
+  siMaterialdesign, siFigma, siClaude, siReact, siTypescript, siJavascript, siVite, siTailwindcss,
 ]
 
 // Brand color of a logo, falling back to the text color when it would vanish on the current background.
