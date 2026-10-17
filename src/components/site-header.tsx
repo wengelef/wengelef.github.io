@@ -2,7 +2,9 @@ import { AnimatePresence, motion } from 'motion/react'
 
 import avatar from '@/assets/profile.png?w=64&format=webp'
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler'
-import { profile } from '@/data/cv'
+import { siGithub } from 'simple-icons'
+
+import { links as profileLinks, profile } from '@/data/cv'
 import { useScrolledPast } from '@/lib/use-scrolled-past'
 
 const links = [
@@ -47,6 +49,17 @@ export function SiteHeader() {
               {l.label}
             </a>
           ))}
+          <a
+            href={profileLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:bg-accent inline-flex size-9 items-center justify-center rounded-md transition-colors"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="size-5" aria-hidden="true">
+              <path d={siGithub.path} />
+            </svg>
+          </a>
           <AnimatedThemeToggler className="hover:bg-accent [&_svg]:size-5 inline-flex size-9 items-center justify-center rounded-md transition-colors" />
         </nav>
       </div>
