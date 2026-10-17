@@ -66,7 +66,7 @@ export function InterestsSection() {
           {...ari}
           tone="bg-amber-500/10 text-amber-600 dark:text-amber-400"
           delay={0}
-          className="md:col-span-2 md:row-span-2"
+          className="row-span-2 md:col-span-2"
         >
           {photos.length === 0 && (
             <PawPrint className="text-muted-foreground/10 absolute top-1/2 left-1/2 size-48 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
@@ -74,7 +74,7 @@ export function InterestsSection() {
           {photos.length > 0 && (
             <Marquee pauseOnHover className="mb-4 [--duration:30s] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
               {photos.map((src) => (
-                <img key={src} src={src} alt="Ari" loading="lazy" className="h-64 w-auto rounded-lg object-cover" />
+                <img key={src} src={src} alt="Ari" loading="lazy" className="h-64 w-auto rounded-lg md:h-72 object-cover" />
               ))}
             </Marquee>
           )}
