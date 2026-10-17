@@ -20,7 +20,7 @@ Vite + React 19 + TypeScript, Tailwind CSS v4, shadcn/ui, Magic UI components, `
 
 ## Rules
 - Add Magic UI components with the Magic UI MCP (`.mcp.json`) or `npx shadcn@latest add "https://magicui.design/r/<name>"`. Do not hand-edit files in `src/components/ui/` unless unavoidable.
-- The hero image is made black & white in CSS (`grayscale` in `hero.tsx`). Never pre-process the image; just replace the file.
+- The hero image and the header avatar are made black & white in CSS (`grayscale` in `hero.tsx` / `site-header.tsx`). Never pre-process the images; just replace the files. Everything else uses color: the accent is the `brand` token (`text-brand`, `bg-brand`, defined in `src/index.css`), the icon cloud uses logo brand colors, the heatmap is GitHub green.
 - Theme is the `dark` class on `<html>`, persisted in `localStorage["theme"]`; an inline script in `index.html` applies it before paint. Use shadcn tokens (`bg-background`, `text-muted-foreground`, ...) so both themes work.
 - Deployment is only via `.github/workflows/deploy.yml` on push to `master`. Never commit `dist/`.
 - Before finishing UI work, run `npm run build` and check light + dark mode and a phone-width viewport.

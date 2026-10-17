@@ -20,7 +20,7 @@ export function ContactSection() {
               <Icon className="text-muted-foreground size-5 shrink-0" />
               <div className="min-w-0">
                 {href ? (
-                  <a href={href} className="block truncate font-medium hover:underline">
+                  <a href={href} className="block truncate hover:text-brand font-medium transition-colors hover:underline">
                     {value}
                   </a>
                 ) : (

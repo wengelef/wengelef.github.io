@@ -29,7 +29,7 @@ export function ExperienceTimeline() {
                   className={
                     job.current
                       ? 'size-2 animate-pulse rounded-full bg-emerald-500 md:size-3'
-                      : 'bg-foreground size-1.5 rounded-full md:size-2'
+                      : 'bg-brand size-1.5 rounded-full md:size-2'
                   }
                 />
               </span>

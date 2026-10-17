@@ -48,7 +48,7 @@ export function SiteHeader() {
             <a
               key={l.href}
               href={l.href}
-              className="text-muted-foreground hover:text-foreground hidden text-sm transition-colors sm:inline"
+              className="text-muted-foreground hover:text-brand hidden text-sm transition-colors sm:inline"
             >
               {l.label}
             </a>

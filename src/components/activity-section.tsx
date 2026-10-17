@@ -33,8 +33,8 @@ export function ActivitySection() {
             data={data}
             colorScheme={dark ? 'dark' : 'light'}
             theme={{
-              light: ['#ebebeb', '#171717'],
-              dark: ['#262626', '#fafafa'],
+              light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+              dark: ['#262626', '#0e4429', '#006d32', '#26a641', '#39d353'],
             }}
             showTotalCount={false}
             blockSize={12}
@@ -52,7 +52,7 @@ export function ActivitySection() {
             href="https://github.com/wengelef"
             target="_blank"
             rel="noreferrer"
-            className="text-foreground underline underline-offset-4"
+            className="hover:text-brand text-foreground decoration-brand underline underline-offset-4 transition-colors"
           >
             GitHub
           </a>
