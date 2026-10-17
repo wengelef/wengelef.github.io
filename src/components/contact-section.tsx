@@ -2,11 +2,11 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 
 import { Section } from '@/components/section'
 import { BlurFade } from '@/components/ui/blur-fade'
-import { contact } from '@/data/cv'
+import { contact, contactHrefs } from '@/data/cv'
 
 const rows = [
-  { icon: Phone, label: 'Mobile', value: contact.phone, href: `tel:${contact.phone.replace(/\s/g, '')}` },
-  { icon: Mail, label: 'Personal', value: contact.email, href: `mailto:${contact.email}` },
+  { icon: Phone, label: 'Mobile', value: contact.phone, href: contactHrefs.phone },
+  { icon: Mail, label: 'Personal', value: contact.email, href: contactHrefs.email },
   { icon: MapPin, label: contact.city, value: contact.street, href: undefined },
 ]
 

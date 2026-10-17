@@ -10,6 +10,11 @@ export const contact = {
   city: '53840 Troisdorf',
 }
 
+export const contactHrefs = {
+  phone: `tel:${contact.phone.replace(/\s/g, '')}`,
+  email: `mailto:${contact.email}`,
+}
+
 export const skills: string[] = [
   'Seasoned in agentic coding (claude, antigravity-cli)',
   'Expert in using Android Studio/IntelliJ IDE for Android and Kotlin Multiplatform Development, Android SDK’s and commonly used third-party-libraries',
