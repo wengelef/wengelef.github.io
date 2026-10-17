@@ -4,14 +4,11 @@ export const profile = {
 }
 
 export const contact = {
-  phone: '+49 176 648 50 30 2',
   email: 'wengelef@gmail.com',
-  street: 'Bertha-von-Suttner Str. 1',
-  city: '53840 Troisdorf',
+  location: '53840 Troisdorf / Cologne Area',
 }
 
 export const contactHrefs = {
-  phone: `tel:${contact.phone.replace(/\s/g, '')}`,
   email: `mailto:${contact.email}`,
 }
 

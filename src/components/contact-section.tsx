@@ -1,18 +1,19 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 
+import { LinkedinIcon } from '@/components/linkedin-icon'
 import { Section } from '@/components/section'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { MagicCard } from '@/components/ui/magic-card'
-import { contact, contactHrefs } from '@/data/cv'
+import { contact, contactHrefs, links } from '@/data/cv'
 import { useIsDark } from '@/lib/use-is-dark'
 
 const rows = [
   {
-    icon: Phone,
-    label: 'Mobile',
-    value: contact.phone,
-    href: contactHrefs.phone,
-    tone: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+    icon: LinkedinIcon,
+    label: 'LinkedIn',
+    value: 'florian-wengelewski',
+    href: links.linkedin,
+    tone: 'bg-[#0A66C2]/10 text-[#0A66C2] dark:text-sky-400',
   },
   {
     icon: Mail,
@@ -23,8 +24,8 @@ const rows = [
   },
   {
     icon: MapPin,
-    label: contact.city,
-    value: contact.street,
+    label: 'Location',
+    value: contact.location,
     href: undefined,
     tone: 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
   },
@@ -49,7 +50,10 @@ export function ContactSection() {
                 </span>
                 <div className="min-w-0">
                   {href ? (
-                    <a href={href} className="block truncate hover:text-brand font-medium transition-colors hover:underline">
+                    <a
+                      href={href}
+                      {...(href.startsWith('https:') && { target: '_blank', rel: 'noopener noreferrer' })}
+                      className="block truncate hover:text-brand font-medium transition-colors hover:underline">
                       {value}
                     </a>
                   ) : (
