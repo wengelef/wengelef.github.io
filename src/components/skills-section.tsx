@@ -1,3 +1,4 @@
+import { Blocks, Bot, ShieldCheck, Smartphone, Users } from 'lucide-react'
 import { useMemo } from 'react'
 import {
   siAndroid,
@@ -24,8 +25,17 @@ import {
 import { Section } from '@/components/section'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { IconCloud } from '@/components/ui/icon-cloud'
-import { skills } from '@/data/cv'
+import { MagicCard } from '@/components/ui/magic-card'
+import { type SkillGroup, skills } from '@/data/cv'
 import { useIsDark } from '@/lib/use-is-dark'
+
+const groupIcons: Record<SkillGroup['icon'], { icon: typeof Smartphone; tone: string }> = {
+  mobile: { icon: Smartphone, tone: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' },
+  architecture: { icon: Blocks, tone: 'bg-sky-500/10 text-sky-600 dark:text-sky-400' },
+  quality: { icon: ShieldCheck, tone: 'bg-amber-500/10 text-amber-600 dark:text-amber-400' },
+  agentic: { icon: Bot, tone: 'bg-violet-500/10 text-violet-600 dark:text-violet-400' },
+  team: { icon: Users, tone: 'bg-rose-500/10 text-rose-600 dark:text-rose-400' },
+}
 
 const brandIcons = [
   siKotlin, siAndroid, siAndroidstudio, siIntellijidea, siJetpackcompose, siOpenjdk, siGradle,
@@ -66,15 +76,39 @@ export function SkillsSection() {
             <IconCloud icons={icons} showControl={false} />
           </div>
         </BlurFade>
-        <ul className="space-y-3">
-          {skills.map((s, i) => (
-            <BlurFade key={s} inView delay={0.05 * i}>
-              <li className="text-muted-foreground flex gap-3 leading-snug">
-                <span className="bg-brand mt-2 size-1.5 shrink-0 rounded-full" />
-                <span>{s}</span>
-              </li>
-            </BlurFade>
-          ))}
+        <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+          {skills.map((s, i) => {
+            const { icon: Icon, tone } = groupIcons[s.icon]
+            return (
+              <BlurFade key={s.title} inView delay={0.08 * i} className="lg:last:col-span-2">
+                <li className="h-full">
+                  <MagicCard
+                    className="bg-card h-full rounded-xl border"
+                    gradientColor={dark ? '#3b2a6b' : '#e9e0ff'}
+                    gradientFrom="#8b5cf6"
+                    gradientTo="#c4b5fd"
+                  >
+                    <div className="space-y-3 p-4">
+                      <div className="flex items-center gap-3">
+                        <span className={`flex size-9 shrink-0 items-center justify-center rounded-full ${tone}`}>
+                          <Icon className="size-5" />
+                        </span>
+                        <h3 className="font-medium">{s.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-snug">{s.summary}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {s.tags.map((t) => (
+                          <span key={t} className="bg-muted/50 rounded-full border px-2 py-0.5 text-xs">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </MagicCard>
+                </li>
+              </BlurFade>
+            )
+          })}
         </ul>
       </div>
     </Section>

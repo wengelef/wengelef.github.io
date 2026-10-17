@@ -12,18 +12,44 @@ export const contactHrefs = {
   email: `mailto:${contact.email}`,
 }
 
-export const skills: string[] = [
-  'Seasoned in agentic coding (claude, antigravity-cli)',
-  'Expert in using Android Studio/IntelliJ IDE for Android and Kotlin Multiplatform Development, Android SDK’s and commonly used third-party-libraries',
-  'Git version control system',
-  'Understanding of the importance of code quality and continuous integration (Unit Testing, static code analysis, Jenkins CI, Github Actions, Fabric/Firebase)',
-  'Broad development knowledge in Kotlin and Java',
-  'Enthusiastic about Material Design and Mobile User Experience',
-  'Clean Architecture and Design Patterns',
-  'Functional Reactive Programming (RxJava, coroutines)',
-  'Implementing RESTful Clients is second nature (Ktor, Retrofit 2)',
-  'ORMs and NoSQL (SQL Delight)',
-  'Working in agile environments (Scrum, Kanban)',
+export interface SkillGroup {
+  title: string
+  icon: 'mobile' | 'architecture' | 'quality' | 'agentic' | 'team'
+  summary: string
+  tags: string[]
+}
+
+export const skills: SkillGroup[] = [
+  {
+    title: 'Mobile',
+    icon: 'mobile',
+    summary: 'Android and Kotlin Multiplatform, with a love for Material Design and mobile UX',
+    tags: ['Kotlin', 'Java', 'Kotlin Multiplatform', 'Android SDK', 'Android Studio / IntelliJ', 'Material Design'],
+  },
+  {
+    title: 'Architecture',
+    icon: 'architecture',
+    summary: 'Clean Architecture, design patterns and functional reactive programming',
+    tags: ['Clean Architecture', 'Design Patterns', 'Coroutines', 'RxJava', 'Ktor', 'Retrofit 2', 'SQLDelight'],
+  },
+  {
+    title: 'Quality & CI',
+    icon: 'quality',
+    summary: 'Code quality and continuous integration as a habit',
+    tags: ['Unit Testing', 'Static Analysis', 'Jenkins', 'GitHub Actions', 'Firebase', 'Git'],
+  },
+  {
+    title: 'Agentic coding',
+    icon: 'agentic',
+    summary: 'Seasoned in building software with AI agents',
+    tags: ['Claude', 'antigravity-cli'],
+  },
+  {
+    title: 'Ways of working',
+    icon: 'team',
+    summary: 'At home in agile environments',
+    tags: ['Scrum', 'Kanban'],
+  },
 ]
 
 export interface Job {

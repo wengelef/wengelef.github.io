@@ -8,7 +8,7 @@ description: Update the CV website content - add or edit a job, skill, project, 
 All content lives in `src/data/cv.ts`. Components only render it.
 
 - **New job**: add an object at the top of `jobs` (newest first) with `companyName`, `time`, `title`, `items`. If the previous top job ended, remove its `current: true` and set the end date in its `time`; put `current: true` on the new one if ongoing.
-- **Skill bullet**: add a string to `skills`. To add a logo to the Icon Cloud, import `si<Name>` from `simple-icons` in `src/components/skills-section.tsx` and append it to `brandIcons` (check the export exists first).
+- **Skill**: `skills` is a list of groups (`title`, `icon`, `summary`, `tags`). Add the skill to the fitting group's `tags`, or add a new group (new `icon` keys also need an entry in `groupIcons` in `src/components/skills-section.tsx`). To add a logo to the Icon Cloud, import `si<Name>` from `simple-icons` in `src/components/skills-section.tsx` and append it to `brandIcons` (check the export exists first).
 - **Project**: add `{ title, url, texts }` to `projects`.
 - **Interests**: edit `interests` in `cv.ts`; add Ari photos by dropping image files into `src/assets/ari/` (no code change).
 - **Contact / title**: edit `contact` / `profile`.

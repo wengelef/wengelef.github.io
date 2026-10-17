@@ -23,7 +23,9 @@ function fallbackHtml() {
 <h1>${escapeHtml(profile.name)}</h1>
 <p>${escapeHtml(profile.title)}</p>
 <h2>Skills</h2>
-<ul>${skills.map((s) => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
+<ul>${skills
+  .map((s) => `<li><strong>${escapeHtml(s.title)}</strong>: ${escapeHtml(s.summary)} (${escapeHtml(s.tags.join(', '))})</li>`)
+  .join('')}</ul>
 <h2>Experience</h2>
 ${jobsHtml}
 <h2>Projects</h2>
