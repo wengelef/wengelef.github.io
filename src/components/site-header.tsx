@@ -14,8 +14,8 @@ const links = [
 ]
 
 const quickContacts = [
-  { icon: Phone, label: 'Call', href: contactHrefs.phone },
-  { icon: Mail, label: 'Email', href: contactHrefs.email },
+  { icon: Phone, label: 'Call', href: contactHrefs.phone, tone: 'text-emerald-600 dark:text-emerald-400' },
+  { icon: Mail, label: 'Email', href: contactHrefs.email, tone: 'text-sky-600 dark:text-sky-400' },
 ]
 
 const iconButton = 'hover:bg-accent inline-flex size-9 items-center justify-center rounded-md transition-colors'
@@ -55,12 +55,12 @@ export function SiteHeader() {
           ))}
           <AnimatePresence initial={false}>
             {pastContact &&
-              quickContacts.map(({ icon: Icon, label, href }) => (
+              quickContacts.map(({ icon: Icon, label, href, tone }) => (
                 <motion.a
                   key={label}
                   href={href}
                   aria-label={label}
-                  className={iconButton}
+                  className={`${iconButton} ${tone}`}
                   initial={{ opacity: 0, x: 8 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 8 }}
